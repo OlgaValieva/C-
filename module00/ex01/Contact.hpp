@@ -6,7 +6,7 @@
 /*   By: carys <carys@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 12:18:33 by carys             #+#    #+#             */
-/*   Updated: 2022/10/17 13:36:06 by carys            ###   ########.fr       */
+/*   Updated: 2022/10/18 13:16:30 by carys            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,11 @@ class Contact
         std:: string getDarkestSecret();
     
     private:
-        std:: string FirstName();
-        std:: string LastName();  
-        std:: string NickName();  
-        std:: string PhoneNumber();  
-        std:: string DarkestSecret();
+        std:: string FirstName;
+        std:: string LastName;  
+        std:: string NickName;  
+        std:: string PhoneNumber;  
+        std:: string DarkestSecret;
 };
 
 #endif

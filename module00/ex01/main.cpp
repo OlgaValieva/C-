@@ -6,7 +6,7 @@
 /*   By: carys <carys@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 12:18:36 by carys             #+#    #+#             */
-/*   Updated: 2022/10/17 13:22:24 by carys            ###   ########.fr       */
+/*   Updated: 2022/10/18 13:43:51 by carys            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,27 +20,25 @@ int main(void)
 
     while(1)
     {
-        std:cout << "ADD || SEARCH || EXIT";
+        std::cout << "input: ADD || SEARCH || EXIT:\n";
         getline(std::cin, command);
         if (command == "ADD")
         {
-            std:cout << "ADD contact" << std::endl;
             if (Book.AddContact())
                 continue;
-            std:cout << "contact added" << std::endl;
         }
         else if (command == "SEARCH")
         {
-            std:cout << "SEARCH contact" << std::endl;
+            std::cout << "\nAll contacts:" << std::endl;
             Book.SearchContact();
         }
         else if (command == "EXIT")
         {
-            std:cout << "EXIT" << std::endl;
+            std::cout << "SEE YOU" << std::endl;
             break;
         }
         else
-            std:cout << "ERROR\n" << std::endl;  
+            std::cout << "ERROR\n" << std::endl;  
     }
     return(0);
 }
