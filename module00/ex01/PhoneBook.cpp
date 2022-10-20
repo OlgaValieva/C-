@@ -6,7 +6,7 @@
 /*   By: carys <carys@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 12:18:41 by carys             #+#    #+#             */
-/*   Updated: 2022/10/18 13:47:04 by carys            ###   ########.fr       */
+/*   Updated: 2022/10/20 13:18:57 by carys            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,15 +73,15 @@ void PhoneBook::SearchContact()
         if (FirstName.empty())
             break;
         std::cout << "|" << std::right << std::setw(10) << i + 1 << "|";
-        std::string newFirstName = FirstName.length() > 11 ? FirstName.substr(0, 9) + ".": FirstName;
+        std::string newFirstName = FirstName.length() > 10 ? FirstName.substr(0, 9) + ".": FirstName;
         std::cout << std::right << std::setw(10) << newFirstName << "|";
 
         std::string LastName = contacts[i].getLastName();
-        std::string newLastName = LastName.length() > 11 ? LastName.substr(0, 9) + ".": LastName;
+        std::string newLastName = LastName.length() > 10 ? LastName.substr(0, 9) + ".": LastName;
         std::cout << std::right << std::setw(10) << newLastName << "|";
 
         std::string NickName = contacts[i].getNickName();
-        std::string newNickName = NickName.length() > 11 ? NickName.substr(0, 9) + ".": NickName;
+        std::string newNickName = NickName.length() > 10 ? NickName.substr(0, 9) + ".": NickName;
         std::cout << std::right << std::setw(10) << newNickName << "|" << std::endl;
         size++;
         i++;
@@ -98,12 +98,12 @@ void PhoneBook::SearchContact()
         std::cout << std::endl;
         std::cout <<"index: " << index <<std::endl;
         index--;
-        std::cout << "First Name " << contacts[index].getFirstName() << std::endl;
-        std::cout << "Last Name " << contacts[index].getLastName() << std::endl;
-        std::cout << "Nick Name " << contacts[index].getNickName() << std::endl;
-        std::cout << "PhoneNumber " << contacts[index].getPhoneNumber() << std::endl;
-        std::cout << "DarkestSecret " << contacts[index].getDarkestSecret() << std::endl;
+        std::cout << "First Name: " << contacts[index].getFirstName() << std::endl;
+        std::cout << "Last Name: " << contacts[index].getLastName() << std::endl;
+        std::cout << "Nick Name: " << contacts[index].getNickName() << std::endl;
+        std::cout << "PhoneNumber: " << contacts[index].getPhoneNumber() << std::endl;
+        std::cout << "DarkestSecret: " << contacts[index].getDarkestSecret() << std::endl;
         std::cout << std::endl;
     }
-    std::cin.ignore(100, '\n');
+       std::cin.ignore(32767, '\n');
 }

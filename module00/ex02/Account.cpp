@@ -6,7 +6,7 @@
 /*   By: carys <carys@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 13:12:24 by carys             #+#    #+#             */
-/*   Updated: 2022/10/19 15:29:14 by carys            ###   ########.fr       */
+/*   Updated: 2022/10/20 13:15:58 by carys            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,6 @@ void	Account::makeDeposit( int deposit )
 	_nbDeposits++;
     _totalAmount += deposit;
 	_totalNbDeposits++;
-    _totalAmount += deposit;
     std::cout << ";amount:" <<_amount << ";nb_deposits:" << _nbDeposits << std::endl;
 }
 
