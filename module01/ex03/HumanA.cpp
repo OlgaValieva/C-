@@ -1,28 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: carys <carys@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/21 13:42:01 by carys             #+#    #+#             */
-/*   Updated: 2022/10/24 10:23:31 by carys            ###   ########.fr       */
+/*   Created: 2022/10/24 14:00:51 by carys             #+#    #+#             */
+/*   Updated: 2022/10/24 15:30:32 by carys            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "HumanA.hpp"
 
-int main()
+HumanA::HumanA(std::string name, Weapon &weapon) : name(name), weapon(weapon){}
+
+HumanA::~HumanA(){}
+
+void HumanA::attack()
 {
-    Zombie Zom = Zombie("Zom");
-    Zom.announce();
-    
-    Zombie *bie = newZombie("bie");
-    bie->announce();
-    
-    randomChump("randomi");
-
-    delete bie;
-    
-    return (0);
+    std::cout << name << "attacks with their" << weapon.getType() << std::endl;
 }

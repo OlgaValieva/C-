@@ -1,28 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: carys <carys@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/21 13:42:01 by carys             #+#    #+#             */
-/*   Updated: 2022/10/24 10:23:31 by carys            ###   ########.fr       */
+/*   Created: 2022/10/24 14:01:05 by carys             #+#    #+#             */
+/*   Updated: 2022/10/24 15:39:02 by carys            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef HUMANB_HPP
+#define HUMANB_HPP
 
-int main()
+#include <iostream>   
+#include <string>
+#include "Weapon.hpp"
+
+class HumanB
 {
-    Zombie Zom = Zombie("Zom");
-    Zom.announce();
-    
-    Zombie *bie = newZombie("bie");
-    bie->announce();
-    
-    randomChump("randomi");
+    public:
+        HumanB(std::string name);
+        ~HumanB();
+        void attack();
+        void setWeapon(Weapon &weapon);
 
-    delete bie;
-    
-    return (0);
-}
+    private:
+        std:: string name;
+        Weapon *weapon;
+};
+
+#endif

@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: carys <carys@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/21 13:42:01 by carys             #+#    #+#             */
-/*   Updated: 2022/10/24 10:23:31 by carys            ###   ########.fr       */
+/*   Created: 2022/10/24 14:01:14 by carys             #+#    #+#             */
+/*   Updated: 2022/10/24 15:10:27 by carys            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Weapon.hpp"
 
-int main()
+Weapon::Weapon(std::string name)
 {
-    Zombie Zom = Zombie("Zom");
-    Zom.announce();
-    
-    Zombie *bie = newZombie("bie");
-    bie->announce();
-    
-    randomChump("randomi");
+   type = name;
+}
+Weapon::~Weapon(){}
 
-    delete bie;
-    
-    return (0);
+const std:: string &Weapon::getType()
+{
+    return (type);
+}
+void Weapon::setType(std:: string name)
+{
+    type = name;
 }
