@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   SedIsForLosers.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: carys <carys@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/24 10:09:54 by carys             #+#    #+#             */
-/*   Updated: 2022/10/25 11:11:18 by carys            ###   ########.fr       */
+/*   Created: 2022/10/25 12:42:38 by carys             #+#    #+#             */
+/*   Updated: 2022/10/25 13:35:38 by carys            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
 
-int main()
+#ifndef SEDISFORLOSERS_HPP
+#define SEDISFORLOSERS_HPP
+
+#include <iostream>   
+#include <string>
+#include <fstream> //ifstream ofstream 
+
+class SedIsForLosers
 {
-    int NumHorde = 0;
-    std::cout << "Input the number of zombies in the horde\n";
-    std::cin >> NumHorde;
-    if (std::cin.fail())
-    {
-        std::cin.clear();
-        std::cin.ignore(32767,'\n');
-    }
-    Zombie *horde = zombieHorde(NumHorde, "Horde_Of_Zombies");
-    if (horde != NULL)
-        delete [] horde;
-    return (0);
-}
+    public:
+        SedIsForLosers();
+        ~SedIsForLosers();
+        void  newfile(std::string filename, std::string s1, std::string s2);
+    private:
+        std:: string name;
+};
+
+#endif

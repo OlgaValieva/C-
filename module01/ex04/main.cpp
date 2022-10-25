@@ -5,25 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: carys <carys@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/24 10:09:54 by carys             #+#    #+#             */
-/*   Updated: 2022/10/25 11:11:18 by carys            ###   ########.fr       */
+/*   Created: 2022/10/25 12:06:26 by carys             #+#    #+#             */
+/*   Updated: 2022/10/25 15:08:26 by carys            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "SedIsForLosers.hpp"
 
-int main()
+int main(int argc, char **argv)
 {
-    int NumHorde = 0;
-    std::cout << "Input the number of zombies in the horde\n";
-    std::cin >> NumHorde;
-    if (std::cin.fail())
+    if (argc != 4 || !argv[2][0] || !argv[3][0])
     {
-        std::cin.clear();
-        std::cin.ignore(32767,'\n');
+        std::cout << "error in the arguments" << std::endl;
+        return (0);
     }
-    Zombie *horde = zombieHorde(NumHorde, "Horde_Of_Zombies");
-    if (horde != NULL)
-        delete [] horde;
-    return (0);
+    SedIsForLosers success;
+    success.newfile(argv[1], argv[2], argv[3]);
+    return(0);
 }
+

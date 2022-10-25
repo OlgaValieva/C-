@@ -6,7 +6,7 @@
 /*   By: carys <carys@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 10:10:08 by carys             #+#    #+#             */
-/*   Updated: 2022/10/24 10:44:44 by carys            ###   ########.fr       */
+/*   Updated: 2022/10/25 11:01:58 by carys            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <iostream>   
 #include <string>
+#include  <cstdint>
 
 class Zombie
 {
