@@ -6,7 +6,7 @@
 /*   By: carys <carys@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 10:10:11 by carys             #+#    #+#             */
-/*   Updated: 2022/10/25 11:07:34 by carys            ###   ########.fr       */
+/*   Updated: 2022/10/26 12:57:17 by carys            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ Zombie* zombieHorde( int N, std::string name )
         return (NULL);
     }   
     Zombie *hordeZombie = new Zombie[N];
+    if(!hordeZombie)
+        std::cout << " Could not allocate memory";
     while(i < N)
     {
         hordeZombie[i].setName(name);

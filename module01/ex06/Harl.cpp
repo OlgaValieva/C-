@@ -6,7 +6,7 @@
 /*   By: carys <carys@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 13:08:48 by carys             #+#    #+#             */
-/*   Updated: 2022/10/26 14:12:57 by carys            ###   ########.fr       */
+/*   Updated: 2022/10/26 15:08:48 by carys            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,7 @@ Harl::~Harl(){}
 
 void Harl::complain( std::string level )
 {
-    std::string levels[4] = {"DEBUG", "INFO" , "WARNING", "ERROR"};
- //   void (Harl:: *ptrtomemfun[4])() = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
+    std::string levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
     int numberLevel = -1;
     for (int i = 0; i < 4; i++)
     {
