@@ -6,11 +6,12 @@
 /*   By: carys <carys@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 19:45:14 by carys             #+#    #+#             */
-/*   Updated: 2022/10/31 19:52:07 by carys            ###   ########.fr       */
+/*   Updated: 2022/10/31 21:35:15 by carys            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 int main()
 {
@@ -20,9 +21,9 @@ int main()
     
     ClapTrap Airat("Airat");
     
-    ClapTrap Misha("Misha");
-    
     ClapTrap Raf("Raf");
+    
+    ScavTrap Misha("Misha");
     
     Airat.printMessage();
     Misha.printMessage();
@@ -39,7 +40,10 @@ int main()
     
     Misha.guardGate();
     
+    
     Airat.printMessage();
     Misha.printMessage();
     Raf.printMessage();
+    Misha.setEnergyPoints(0);
+    Misha.attack("Vasya");
 }
