@@ -5,40 +5,49 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: carys <carys@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/31 16:46:08 by carys             #+#    #+#             */
-/*   Updated: 2022/11/01 17:36:23 by carys            ###   ########.fr       */
+/*   Created: 2022/10/31 19:45:14 by carys             #+#    #+#             */
+/*   Updated: 2022/11/01 17:16:27 by carys            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int main()
 {
-    ClapTrap olya;
-    
-    ClapTrap moscow(olya);
-    
-    ClapTrap Airat("Airat");
-    
-    ClapTrap Misha("Misha");
-    
-    ClapTrap Raf("Raf");
+    ClapTrap Airat("Airat");  
+    FragTrap Raf("Raf"); 
+    ScavTrap Misha("Misha");
+    DiamondTrap Olya("Olya");
     
     Airat.printMessage();
     Misha.printMessage();
     Raf.printMessage();
+    Olya.printMessage();
 
-    Airat.setAttackDamage(5);
     Airat.attack(Misha.getName());
-    Misha.takeDamage(5);
-    Misha.beRepaired(5);
+    Airat.takeDamage(5);
+    Airat.beRepaired(4);
     
-    Misha.setAttackDamage(10);
-    Misha.attack(Airat.getName());
-    Airat.takeDamage(10);
+    Misha.attack(Raf.getName());
+    Misha.takeDamage(5);
+    Misha.beRepaired(4);
+    Misha.guardGate();
 
+    Raf.attack(Olya.getName());
+    Raf.takeDamage(5);
+    Raf.beRepaired(4);
+    Raf.highFivesGuys();
+
+    Olya.attack(Airat.getName());
+    Olya.takeDamage(5);
+    Olya.beRepaired(4);
+    Olya.whoAmI();
     
     Airat.printMessage();
     Misha.printMessage();
     Raf.printMessage();
+    Olya.printMessage();
 }

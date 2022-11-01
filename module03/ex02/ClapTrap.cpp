@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: carys <carys@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/31 16:45:59 by carys             #+#    #+#             */
-/*   Updated: 2022/11/01 17:34:40 by carys            ###   ########.fr       */
+/*   Created: 2022/10/31 19:45:08 by carys             #+#    #+#             */
+/*   Updated: 2022/11/01 17:34:53 by carys            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,13 +50,13 @@ void ClapTrap::attack(const std::string& target)
     if (hitPoints <=0)
     {
         hitPoints = 0;
-        std::cout << "ClapTrap " << name << "no hit points" << std::endl;
+        std::cout << "ClapTrap " << name << " no hit points" << std::endl;
         return ; 
     }
     if (energyPoints <= 0)
     {
         energyPoints = 0;
-        std::cout << "ClapTrap " << name << "no energy points" << std::endl;
+        std::cout << "ClapTrap " << name << " no energy points" << std::endl;
         return ; 
     }
     energyPoints--;
@@ -74,6 +74,8 @@ void ClapTrap::takeDamage(unsigned int amount)
     }
     std::cout << "ClapTrap " << name << " lost " << amount <<  " hit points"<< std::endl;
     hitPoints -= amount;
+    if (hitPoints < 0)
+        hitPoints = 0;
 }
 
 void ClapTrap::beRepaired(unsigned int amount)
@@ -87,8 +89,9 @@ void ClapTrap::beRepaired(unsigned int amount)
     if (energyPoints <= 0)
     {
         energyPoints = 0;
-        std::cout << "ClapTrap " << name << "no hit energy points" << std::endl;
+        std::cout << "ClapTrap " << name << " no hit energy points" << std::endl;
         return ;
+        
     }
     std::cout << "ClapTrap " << name << " repairs by " << amount << " points"<< std::endl; 
     hitPoints +=amount;

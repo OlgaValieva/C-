@@ -6,15 +6,15 @@
 #    By: carys <carys@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/31 19:45:22 by carys             #+#    #+#              #
-#    Updated: 2022/11/01 13:53:44 by carys            ###   ########.fr        #
+#    Updated: 2022/11/01 13:49:45 by carys            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	ScavTrap
+NAME	=	FragTrap
 
-HEADER	=	ClapTrap.hpp ScavTrap.hpp
+HEADER	=	ClapTrap.hpp ScavTrap.hpp FragTrap.hpp
 
-SRCS	=	main.cpp ClapTrap.cpp ScavTrap.cpp
+SRCS	=	main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 			
 OBJS	=	${SRCS:%.cpp=%.o}
 
@@ -25,7 +25,7 @@ RM		=	rm -f
 CLR		=	\001\033[1;92m\002
 RST		=	\001\033[0m\002
 
-CPPFLAGS	=	-Wall -Wextra -Werror -g3  -std=c++98 
+CPPFLAGS	=	-Wall -Wextra -Werror -g3 -std=c++98 
 
 .PHONY:		all clean fclean re
 

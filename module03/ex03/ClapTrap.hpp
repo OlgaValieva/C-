@@ -6,7 +6,7 @@
 /*   By: carys <carys@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 19:45:11 by carys             #+#    #+#             */
-/*   Updated: 2022/11/01 12:56:51 by carys            ###   ########.fr       */
+/*   Updated: 2022/11/01 16:51:23 by carys            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ class ClapTrap
 
         void printMessage();
         
-    private:
+    protected:
 //Name, which is passed as parameter to a constructor
         std::string name;
 //Hit points (10), represent the health of the ClapTrap

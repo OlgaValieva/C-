@@ -6,7 +6,7 @@
 /*   By: carys <carys@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 19:45:25 by carys             #+#    #+#             */
-/*   Updated: 2022/11/01 14:19:36 by carys            ###   ########.fr       */
+/*   Updated: 2022/11/01 13:46:43 by carys            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ void ScavTrap::attack(const std::string& target)
         std::cout << "ScavTrap  " << this->getName() << " no energy points" << std::endl;
         return ; 
     }
-   setEnergyPoints(getEnergyPoints() - 1);
-   std::cout << "ScavTrap " << this->getName() << " attacks " << target << ", causing " << getAttackDamage()<< " points of damage!"<< std::endl;    
+    setEnergyPoints(getEnergyPoints() - 1); 
+    std::cout << "ScavTrap " << this->getName() << " attacks " << target << ", causing " << getAttackDamage()<< " points of damage!"<< std::endl;    
  }
 

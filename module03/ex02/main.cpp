@@ -5,24 +5,20 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: carys <carys@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/31 16:46:08 by carys             #+#    #+#             */
-/*   Updated: 2022/11/01 17:36:23 by carys            ###   ########.fr       */
+/*   Created: 2022/10/31 19:45:14 by carys             #+#    #+#             */
+/*   Updated: 2022/11/01 14:25:09 by carys            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int main()
 {
-    ClapTrap olya;
-    
-    ClapTrap moscow(olya);
-    
-    ClapTrap Airat("Airat");
-    
-    ClapTrap Misha("Misha");
-    
-    ClapTrap Raf("Raf");
+    ClapTrap Airat("Airat");  
+    FragTrap Raf("Raf"); 
+    ScavTrap Misha("Misha");
     
     Airat.printMessage();
     Misha.printMessage();
@@ -36,7 +32,9 @@ int main()
     Misha.setAttackDamage(10);
     Misha.attack(Airat.getName());
     Airat.takeDamage(10);
-
+    
+    Misha.guardGate();
+    Raf.highFivesGuys();
     
     Airat.printMessage();
     Misha.printMessage();
