@@ -6,7 +6,7 @@
 /*   By: carys <carys@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 10:57:19 by carys             #+#    #+#             */
-/*   Updated: 2022/11/02 15:48:15 by carys            ###   ########.fr       */
+/*   Updated: 2022/11/02 19:48:41 by carys            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class WrongCat : public WrongAnimal
         WrongCat &operator=(const WrongCat &wrongCat);
         virtual ~WrongCat();
 
-        virtual void makeSound() const;
+        void makeSound() const;
 };
 
 #endif

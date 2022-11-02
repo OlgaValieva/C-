@@ -6,7 +6,7 @@
 /*   By: carys <carys@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 10:56:53 by carys             #+#    #+#             */
-/*   Updated: 2022/11/02 17:32:06 by carys            ###   ########.fr       */
+/*   Updated: 2022/11/02 18:21:23 by carys            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,7 @@ class Animal
         std::string getType() const;
         
     protected:
-        std::string type;
-        
+        std::string type; 
 };
 
 #endif
