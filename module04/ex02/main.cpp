@@ -6,7 +6,7 @@
 /*   By: carys <carys@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 10:52:25 by carys             #+#    #+#             */
-/*   Updated: 2022/11/02 18:17:05 by carys            ###   ########.fr       */
+/*   Updated: 2022/11/02 18:09:10 by carys            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,8 @@ int main()
     std::cout << CLR"destrucor~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"RST << std::endl;
 	for (int i = 0; i < 4; i++)
         delete (array[i]);
+
+        
     std::cout << CLR"Defolt construcor~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"RST << std::endl;
     Dog *dog = new Dog;
 	dog->getBrain()->setIdeas("Men");
@@ -53,10 +55,7 @@ int main()
     Dog *newdog = new Dog(*dog);
 	newdog->getBrain()->makeIdeas();
     std::cout << CLR"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"RST << std::endl;
-    // Dog basic;
-    // Dog tmp =basic;
-    // std::cout << basic.getType() << " " << std::endl;
-    //basic.makeSound();
+
 	delete dog;
 	delete newdog;
     return 0;
