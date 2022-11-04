@@ -6,7 +6,7 @@
 /*   By: carys <carys@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 14:00:14 by carys             #+#    #+#             */
-/*   Updated: 2022/11/03 21:47:15 by carys            ###   ########.fr       */
+/*   Updated: 2022/11/04 10:50:52 by carys            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ class Form
         int getToExecute() const;
         void beSigned(Bureaucrat &bureaucrat);
         
-        virtual void execute(Bureaucrat const & executor) const = 0; // add
+        virtual void execute(Bureaucrat const & executor) const = 0; 
 
-        class FormIsNotSigned : public std::exception //add 
+        class FormIsNotSigned : public std::exception 
         {
             virtual const char* what() const throw()
             {
@@ -53,13 +53,9 @@ class Form
         };
 
     private:
-        //A constant name
         const std::string name;
-        //A boolean indicating whether it is signed (at construction, it’s not)
         bool isSigned;
-        //A constant grade required to sign it
         const int toSign;
-        //And a constant grade required to execute it.
         const int toExecute;
 };
 

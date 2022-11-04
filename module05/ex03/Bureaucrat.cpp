@@ -6,7 +6,7 @@
 /*   By: carys <carys@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 11:03:35 by carys             #+#    #+#             */
-/*   Updated: 2022/11/03 17:14:27 by carys            ###   ########.fr       */
+/*   Updated: 2022/11/04 10:16:56 by carys            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,8 @@ Bureaucrat::Bureaucrat(const Bureaucrat &bureaucrat) : name(bureaucrat.getName()
 
 Bureaucrat &Bureaucrat::operator = (const Bureaucrat &bureaucrat)
 {
-    if (this == &bureaucrat)
-        return (*this);
-    grade = bureaucrat.getGrade();
+    if (this != &bureaucrat)
+        grade = bureaucrat.getGrade();
     return (*this); 
 }
 
@@ -87,7 +86,7 @@ void Bureaucrat::executeForm(Form const & form)
     try
     {
         form.execute(*this);
-        std::cout << name << " executed " << form.getName() << std::endl;
+        std::cout << getName() << " executed " << form.getName() << std::endl;
     }
     catch(const std::exception& e)
     {

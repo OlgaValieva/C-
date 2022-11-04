@@ -5,20 +5,24 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "lldb",
+            "name": "(lldb) Запустить",
+            "type": "cppdbg",
             "request": "launch",
-            "name": "Debug scavtrap01",
-            "program": "${workspaceFolder}/module03/ex01/ScavTrap",
+            "program": "Введите имя программы, например: ${workspaceFolder}/a.out",
             "args": [],
-            "cwd": "${workspaceFolder}/module03/ex01"
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb"
         },
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Debug Fragtrap02",
-            "program": "${workspaceFolder}/module03/ex02/FragTrap",
+            "name": "Debug scavtrap01",
+            "program": "${workspaceFolder}/module05/ex03/INTERN",
             "args": [],
-            "cwd": "${workspaceFolder}/module03/ex02"
+            "cwd": "${workspaceFolder}/module05/ex03"
         }
     ]
 }
