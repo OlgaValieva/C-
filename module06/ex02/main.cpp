@@ -6,7 +6,7 @@
 /*   By: carys <carys@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 10:52:25 by carys             #+#    #+#             */
-/*   Updated: 2022/11/05 13:02:29 by carys            ###   ########.fr       */
+/*   Updated: 2022/11/06 13:06:38 by carys            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ void identify(Base* p)
 		std::cout << "B type of the object pointed to by p" << std::endl;
 	else if (dynamic_cast<C*>(p))
 		std::cout << "C type of the object pointed to by p" << std::endl;
+	else
+		std::cout << "Unknow type of the object pointed to by p" << std::endl;
 }
 void identify(Base& p)
 {
