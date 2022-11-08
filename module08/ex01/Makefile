@@ -6,17 +6,17 @@
 #    By: carys <carys@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/02 10:52:33 by carys             #+#    #+#              #
-#    Updated: 2022/11/06 15:53:17 by carys            ###   ########.fr        #
+#    Updated: 2022/11/08 13:17:36 by carys            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	convert
+NAME	=	Span
 
-HEADER	=	conversion.hpp
+HEADER	=	Span.hpp
 
-SRCS	=	main.cpp conversion.cpp
+SRCS	=	main.cpp Span.cpp
 
-OBJS	=	${SRCS:%.cpp=%.o}
+OBJS	=	${SRCS:%.cpp=%.o} 
 
 CC		=	c++
 
@@ -25,6 +25,7 @@ RM		=	rm -f
 CLR		=	\001\033[1;92m\002
 RST		=	\001\033[0m\002
 
+#CPPFLAGS	=	-Wall -Wextra -Werror -g3 -std=c++98 
 CPPFLAGS	=	-Wall -Wextra -Werror -g3 -std=c++98 -Wshadow -g -fsanitize=address
 
 .PHONY:		all clean fclean re
