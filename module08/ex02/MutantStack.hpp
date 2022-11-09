@@ -6,7 +6,7 @@
 /*   By: carys <carys@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 14:46:45 by carys             #+#    #+#             */
-/*   Updated: 2022/11/08 15:06:15 by carys            ###   ########.fr       */
+/*   Updated: 2022/11/09 11:12:15 by carys            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@
 #include <iostream>
 #include <algorithm>
 #include <stack>
+#include <list>
+#include <vector>
 
 template <class T, class Container = std::deque<T> >
 
@@ -39,6 +41,7 @@ class MutantStack : public std::stack <T, Container>
 			return (*this);
 		}
 		~MutantStack() {}
+        
 		iterator begin(){ return (conteiner.begin()); }
         iterator end(){ return (conteiner.end());}
         void push(T p){ conteiner.push_back(p);}

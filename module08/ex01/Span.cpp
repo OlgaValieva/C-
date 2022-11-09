@@ -6,7 +6,7 @@
 /*   By: carys <carys@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 13:17:55 by carys             #+#    #+#             */
-/*   Updated: 2022/11/08 14:30:30 by carys            ###   ########.fr       */
+/*   Updated: 2022/11/09 10:11:58 by carys            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ int Span::shortestSpan()
     std::vector<int> sortArr = arr;
     std::sort(sortArr.begin(),sortArr.end());
     int shortest = *std::max_element(sortArr.begin(),sortArr.end());
-    for (unsigned int i = 0; i <sortArr.size(); i++)
+    for (unsigned int i = 0; i < sortArr.size(); i++)
         if (i > 0 && std::abs(sortArr[i] - sortArr[i - 1]) < shortest) 
             shortest = std::abs(sortArr[i] - sortArr[i - 1]);
     return (shortest);
