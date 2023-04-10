@@ -84,6 +84,8 @@
         "filesystem": "cpp",
         "__functional_base_03": "cpp",
         "*.tpp": "cpp",
-        "list": "cpp"
+        "list": "cpp",
+        "__tree": "cpp",
+        "map": "cpp"
     }
 }
