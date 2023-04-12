@@ -6,7 +6,7 @@
 #    By: carys <carys@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/11 17:02:03 by carys             #+#    #+#              #
-#    Updated: 2023/04/11 17:03:22 by carys            ###   ########.fr        #
+#    Updated: 2023/04/12 13:29:45 by carys            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,7 +51,7 @@ re:			fclean all
 
 leaks :
 			make
-			leaks -atExit -- ./$(NAME) "1 1 +"
+			leaks -atExit -- ./$(NAME) 3 9 5 7
 			
 fsanitize:  
 			make

@@ -6,7 +6,7 @@
 /*   By: carys <carys@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/08 17:10:58 by carys             #+#    #+#             */
-/*   Updated: 2023/04/10 15:23:19 by carys            ###   ########.fr       */
+/*   Updated: 2023/04/12 14:04:27 by carys            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@
 #include <sstream>
 
 # define dbName		"data.csv"
-# define BADINPUT	"bad input => "
 
 typedef struct tm t_tm;
 
